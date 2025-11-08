@@ -1,6 +1,6 @@
 @font-face {
   font-family: 'Roboto';
-  src: url('../fonts/Roboto-LightItalic.ttf') format('truetype');
+  src: url('../fonts/Roboto-Regular.ttf') format('truetype');
 }
 
 *,
@@ -9,10 +9,6 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-}
-
-h1{
-  color: #007bff;
 }
 /* 2. Корневые переменные (тема, размеры, шрифты) */
 :root {
@@ -25,7 +21,7 @@ h1{
   --color-light: #f8f9fa;
   --color-dark: #212529;
   --color-bg: #ffffff;
-  --color-text: #333333;
+  --color-text: #ffe600;
   
   /* Типографика */
   --font-family-base: 'Roboto', sans-serif;
@@ -116,44 +112,48 @@ textarea:focus {
 
 /* 5. Основные утилиты */
 .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   width: 100%;
-  max-width: 1200px;
-  margin-inline: auto;
-  padding-inline: var(--space-m);
 }
 
-.flex {
+.widgets-container{
   display: flex;
-}
-.flex-col {
-  flex-direction: column;
-}
-.items-center {
+  justify-content: center;
   align-items: center;
 }
-.justify-center {
+
+.widget{
+  display: flex;
+  align-items: center;
   justify-content: center;
-}
-.gap-xs {
-  gap: var(--space-xs);
-}
-.gap-s {
-  gap: var(--space-s);
-}
-.gap-m {
-  gap: var(--space-m);
+
+  height: 140px;
+  width: 140px;
+  border-radius: 20px;
+  background-size: cover;
+  margin: var(--space-m);
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;  
+  border: #fff 1px solid;
 }
 
-.text-center {
-  text-align: center;
+.widget:hover{
+  box-shadow: var(--shadow-lg);
+  transform: scale(1.05);
 }
 
-/* 6. Адаптивность (простой медиа-запрос) */
-@media (max-width: 768px) {
-  :root {
-    --font-size-base: 15px;
-  }
-  .container {
-    padding-inline: var(--space-s);
-  }
+.clicked {
+  transform: scale(1.05);
+}
+
+.summer-bg{
+  background-image: url("../assets/summer-bg.jpg");
+}
+.rain-bg{
+  background-image: url("../assets/rainy-bg.jpg");
+}
+.winter-bg{
+  background-image: url("../assets/winter-bg.jpg");
 }
