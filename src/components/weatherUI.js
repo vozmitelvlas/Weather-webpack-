@@ -1,4 +1,4 @@
-export default class WeatherUI {
+export class WeatherUI {
     constructor(audioController) {
         this.audioController = audioController;
         this.widgets = document.querySelectorAll('.widget');
@@ -19,7 +19,7 @@ export default class WeatherUI {
         this.weatherType = weatherWidget.dataset.weather;
         document.body.className = `${this.weatherType}-bg`;
         weatherWidget.classList.add('clicked');
-        // this.audioController.play(this.weatherType);
+        this.audioController.play(this.weatherType);
     };
 
     handleVolumeChange(/*value*/) {
