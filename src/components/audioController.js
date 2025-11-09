@@ -2,7 +2,13 @@ export class AudioController {
     constructor() {
         this.currentAudio = new Audio();
         this.weatherType = null
+        this.value = 1;
     }
+
+    setVolume(value) {
+        this.volume = value;
+        this.currentAudio.volume = value;
+    };
 
     setSound(weatherType) {
         this.weatherType = weatherType
