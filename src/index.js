@@ -1,4 +1,8 @@
-import "./index.css"
+import "./index.css";
+import WeatherUI from "./weatherUI";
 
-console.log("test", 2, 2);
+class AudioController {
 
+};
+
+new WeatherUI(new AudioController());
