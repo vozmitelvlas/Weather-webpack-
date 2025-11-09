@@ -129,8 +129,8 @@ textarea:focus {
   align-items: center;
   justify-content: center;
 
-  height: 140px;
-  width: 140px;
+  height: 200px;
+  width: 200px;
   border-radius: 20px;
   background-size: cover;
   margin: var(--space-m);
@@ -156,4 +156,20 @@ textarea:focus {
 }
 .winter-bg{
   background-image: url("../assets/winter-bg.jpg");
+}
+.volume-control {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 150px;
+  margin: 20px;
+}
+
+#volume-slider {
+  width: 100%;
+  height: 6px;
+  background: #d3d3d3; /* Color of the track */
+  outline: none;
+  border-radius: 5px;
+  cursor: pointer;
 }
