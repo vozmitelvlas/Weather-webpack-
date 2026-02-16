@@ -1,4 +1,4 @@
-import { WeatherType } from '../constants/weater-type/weater-type';
+import { WeatherType } from '../constants/weather-type';
 
 export class AudioController {
     private currentAudio: HTMLAudioElement;
