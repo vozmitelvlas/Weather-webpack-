@@ -52,6 +52,11 @@ module.exports = {
           "sass-loader"
         ],
       },
+      {
+        test: /\.tsx?$/,
+        exclude: /node_modules/,
+        use: 'ts-loader',
+      },
     ]
   },
 }
