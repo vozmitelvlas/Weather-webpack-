@@ -18,4 +18,17 @@ module.exports = merge(commonConfig, {
         open: true,
         port: 3000,
     },
+    resolve: {
+        extensions: ['.tsx', '.ts', '.js', '.jsx'],
+    },
+    module: {
+        rules: [
+            {
+                test: /\.tsx?$/,
+                exclude: /node_modules/,
+                use: 'ts-loader',
+            },
+            // ... остальные лоадеры (css, etc)
+        ],
+    },
 })
